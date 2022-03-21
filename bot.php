@@ -1,7 +1,5 @@
 <?php
 
-// Bot criado por @DARKNETSSH código original para o @DARKNETSSHBOT
-
 date_default_timezone_set ('America/Sao_Paulo'); // define timestamp padrão
 
 // Incluindo arquivos nescessários
@@ -47,7 +45,7 @@ switch ($tlg->Text ()){
 		'text' => $textoMsg->start,
 		'parse_mode' => 'html',
 		'reply_markup' => $tlg->buildInlineKeyBoard ([
-			[$tlg->buildInlineKeyboardButton ('🇧🇷 SSH Gratis BR 🇧🇷', null, '/sshgratis')]
+			[$tlg->buildInlineKeyboardButton ('🇧🇷 TESTE MINERDNET 24HRS 🇧🇷', null, '/sshgratis')]
 		])
 	]);
 
@@ -56,7 +54,7 @@ switch ($tlg->Text ()){
 
 	$tlg->sendMessage ([
 		'chat_id' => $tlg->ChatID (),
-		'text' => 'Bot original @DARKNETSSHBOT por @DARKNETSSH'
+		'text' => 'Bot Mod @batmonn por @carnalminerdso'
 	]);
 
 	break;
@@ -90,7 +88,7 @@ switch ($tlg->Text ()){
 
 		exec ('./gerarusuario.sh '.$usuario.' '.$senha.' 1 1');
 
-		$textoSSH="🇧🇷 Conta SSH criada ;)\r\n\r\n<b>Servidor:</b> <code>".$ip."</code>\r\n<b>Usuario:</b> <code>".$usuario."</code>\r\n<b>Senha:</b> <code>".$senha."</code>\r\n<b>Logins:</b> 1\r\n<b>Validade:</b> ".date ('d/m', strtotime('+1 day'))."\r\n\r\n🤙 Cortesia do @DARKNETSSHBOT";
+		$textoSSH="🇧🇷 Conta SSH criada baixe na playstore MinerdNet ;)\r\n\r\n<b>Servidor:</b> <code>".$ip."</code>\r\n<b>Usuario:</b> <code>".$usuario."</code>\r\n<b>Senha:</b> <code>".$senha."</code>\r\n<b>Logins:</b> 1\r\n<b>Validade:</b> ".date ('d/m', strtotime('+1 day'))."\r\n\r\n🤙 Cortesia do @canalminerdso";
 
 		$redis->setex ($tlg->UserID (), 43200, 'true'); //define registro para ser guardado por 12h
 
